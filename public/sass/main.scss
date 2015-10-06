@@ -2,9 +2,4 @@
 @import "modules/colors.scss";
 @import "partials/header.scss";
 @import "modules/links_media";
-
-.links_media_item {
-  display: inline;
-  text-decoration: none;
-}
-
+@import "partials/section_contact";

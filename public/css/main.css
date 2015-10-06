@@ -40,6 +40,9 @@ header {
   display: inline;
   text-decoration: none; }
 
-.links_media_item {
-  display: inline;
-  text-decoration: none; }
+.contact_section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center; }
