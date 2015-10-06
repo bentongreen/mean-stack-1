@@ -1,3 +1,7 @@
+
+public/css/**/*.css
+
+
 ### OSX ###
 .DS_Store
 .AppleDouble
