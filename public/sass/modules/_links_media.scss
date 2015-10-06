@@ -1,5 +1,15 @@
 
 .links_media_item {
-  display: inline;
+  display: inline-block;
   text-decoration: none;
+  border-radius: 50%;
+  width: 10em;
+  height: 5.5em;
+  background: #fff;
+  border: 1px solid #666;
+  color: #666;
+  text-align: center;
+  font: .5em Arial, sans-serif;
+  padding-top: 4.5em;
+  text-transform: uppercase;
 }
