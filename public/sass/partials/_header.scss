@@ -18,6 +18,9 @@ header {
 	a {
 		text-decoration: none;
 		color: #ffffff;
+		&:hover {
+			color: $color-3;
+		}
 	}
 
 	@media screen and (min-width: 50em) {
@@ -31,7 +34,15 @@ header {
 				display: inline-block; 
 				padding-top: 4.5em;
 				padding-right: 1em;
+				:after {
+					content: "\a0\a0\a0\a0\b7";
+				}
 			}
+				li:last-child {
+					:after{
+						content: "\a0";
+					}
+				}
 		}
 	}
 
