@@ -1,8 +1,8 @@
 
 .section_contact {
-  @include flexbox;
+  @include flexbox(stretch, space-between);
   background-color: #fff;
-  padding: 3em 5em;
+  padding: 3em 10em;
   address {
     padding-top: 1em;
     line-height: 1.5em;
