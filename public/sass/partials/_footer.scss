@@ -1,0 +1,22 @@
+footer{
+  color: $color-1;
+  display: $type;
+  flex-direction: $direction;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: .4em;
+  border-top: 1.5px solid $color-2;
+  padding-top: 3em;
+  
+  ul{
+    text-transform: uppercase;
+  }
+
+  li{
+    display: inline;
+    padding-right: 2.25em;
+    padding-left: 2.25em;
+  }
+}

@@ -1,3 +1,40 @@
-header{
+.logo {
+	margin-left: 5em;
+}
+
+header {
 	background-color: $color-1;
+	min-height: 10em;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+@media screen and (min-width: 50em) {
+nav {
+		display: inline;
+		float: right;
+		text-align: right;
+		margin-right: 8em;
+		li {
+			display: inline-block; 
+			padding-top: 4.5em;
+			padding-right: 3em;
+		}
+	}
+}
+
+@media screen and (max-width: 50em) {
+	nav {
+		padding-top: 1em;
+		display: block;
+		a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			padding: 0.5em;
+		}
+	}
 }
