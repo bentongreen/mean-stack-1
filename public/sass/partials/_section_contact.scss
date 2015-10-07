@@ -7,19 +7,7 @@
   align-content: center;
   background-color: #fff;
   padding: 3em 5em;
-}
-
-.contact-section {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
-  width: 30em;
+  @include flexbox;
 }
 
 .contact_section_phone, .contact_section_email {

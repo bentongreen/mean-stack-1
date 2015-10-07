@@ -16,24 +16,18 @@
   padding-top: 4.5em;
   text-transform: uppercase;
   font-weight: bolder;
+  @include flexbox;
   &:hover {
     background-color: $color-3;
   }
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-
 }
 
 .svg_twitter {
   padding-right: 2em;
   position: relative;
+  :hover {
+    color: #fff;
+  }
   &:before {
     @include pseudo-insert(url("../images/twitter3.svg"));
   }
@@ -45,6 +39,9 @@
 .svg_facebook {
   padding-right: 2em;
   position: relative;
+  :hover {
+    color: #fff;
+  }
   &:before {
     @include pseudo-insert(url("../images/facebook3.svg"));
   }
@@ -55,6 +52,9 @@
 
 .svg_linkedin {
   position: relative;
+  :hover {
+    color: #fff;
+  }
   &:before {
     @include pseudo-insert(url("../images/linkedin-with-circle.svg"));
   }
