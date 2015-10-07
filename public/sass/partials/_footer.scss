@@ -1,7 +1,8 @@
 footer{
+  min-height: 5em;
   color: $color-1;
-  display: $type;
-  flex-direction: $direction;
+  display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
@@ -9,14 +10,28 @@ footer{
   font-size: .4em;
   border-top: 1.5px solid $color-2;
   padding-top: 3em;
+  padding-bottom: 3em;
   
   ul{
     text-transform: uppercase;
   }
 
   li{
+    color: $color-1;
+    font-family: $font-main;
+    font-size: 2em;
     display: inline;
     padding-right: 2.25em;
     padding-left: 2.25em;
+  }
+
+  a{
+    text-decoration: none;
+    color: $color-1;
+  }
+
+  p{
+    font-family: $font-main;
+    font-size: 2em; 
   }
 }
