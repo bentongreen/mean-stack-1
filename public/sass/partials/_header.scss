@@ -18,6 +18,9 @@ header {
 	a {
 		text-decoration: none;
 		color: #ffffff;
+		&:hover {
+			color: $color-3;
+		}
 	}
 
 	@media screen and (min-width: 50em) {
