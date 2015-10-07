@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -33,6 +33,49 @@ body {
 ol, ul {
   list-style: none; }
 
-header {
-  background-color: #1E1D24; }
+.logo {
+  margin-left: 5em; }
 
+header {
+  background-color: #1E1D24;
+  min-height: 10em; }
+
+a {
+  text-decoration: none;
+  color: #ffffff; }
+
+@media screen and (min-width: 50em) {
+  nav {
+    display: inline;
+    float: right;
+    text-align: right;
+    margin-right: 8em; }
+    nav li {
+      display: inline-block;
+      padding-top: 4.5em;
+      padding-right: 3em; } }
+
+@media screen and (max-width: 50em) {
+  nav {
+    padding-top: 1em;
+    display: block; }
+    nav a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.5em; } }
+
+.links_media_item {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 10em;
+  height: 5.5em;
+  background: #fff;
+  border: 1px solid #666;
+  color: #666;
+  text-align: center;
+  font: .5em Arial, sans-serif;
+  padding-top: 4.5em;
+  text-transform: uppercase;
+  font-weight: bolder; }
