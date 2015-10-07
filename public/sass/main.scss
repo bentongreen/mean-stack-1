@@ -1,5 +1,18 @@
-@import "modules/reset.scss";
-@import "modules/colors.scss";
-@import "partials/header.scss";
+
+// modules
+@import "modules/globals";
+@import "modules/colors";
+@import "modules/typography";
+@import "modules/mixins/flexbox";
+@import "modules/mixins/pseudo-insert";
+@import "modules/reset";
+
 @import "modules/links_media";
+@import "modules/icon-styles";
+
+//partials
+@import "partials/header";
+@import "partials/section_contact";
+@import "partials/section_learnmore";
+@import "partials/section_bloghead";
 

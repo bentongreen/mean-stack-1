@@ -1,0 +1,23 @@
+
+.section_contact {
+  @include flexbox;
+  background-color: #fff;
+  padding: 3em 5em;
+  address {
+    padding-top: 1em;
+    line-height: 1.5em;
+    display: inline-block;
+  }
+  p {
+    display: inline-block;
+    width: 12em;
+    padding-left: 3em;
+  }
+}
+
+.section_contact_phone, .section_contact_email {
+  text-decoration: none;
+  color: inherit;
+}
+
+
