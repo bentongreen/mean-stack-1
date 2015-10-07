@@ -1,21 +1,8 @@
 
-.contact_section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
+.section_contact {
+  @include flexbox;
   background-color: #fff;
   padding: 3em 5em;
-  @include flexbox;
-}
-
-.contact_section_phone, .contact_section_email {
-  text-decoration: none;
-  color: inherit;
-}
-
-.contact_section {
   address {
     padding-top: 1em;
     line-height: 1.5em;
@@ -27,3 +14,10 @@
     padding-left: 3em;
   }
 }
+
+.section_contact_phone, .section_contact_email {
+  text-decoration: none;
+  color: inherit;
+}
+
+
