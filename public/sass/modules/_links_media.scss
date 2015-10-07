@@ -1,3 +1,6 @@
+.links_media {
+  display: flex;
+}
 
 .links_media_item {
   display: inline-block;
@@ -13,4 +16,26 @@
   padding-top: 4.5em;
   text-transform: uppercase;
   font-weight: bolder;
+}
+
+.svg_twitter {
+  padding-right: 2em;
+  position: relative;
+  &:before {
+    @include pseudo-insert(url("../images/twitter3.svg"));
+  }
+}
+.svg_facebook {
+  padding-right: 2em;
+  position: relative;
+  &:before {
+    @include pseudo-insert(url("../images/facebook3.svg"));
+  }
+}
+
+.svg_linkedin {
+  position: relative;
+  &:before {
+    @include pseudo-insert(url("../images/linkedin-with-circle.svg"));
+  }
 }
