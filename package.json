@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mbuchthal/mean-stack-1#readme",
   "dependencies": {
+    "angular": "^1.4.7",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
