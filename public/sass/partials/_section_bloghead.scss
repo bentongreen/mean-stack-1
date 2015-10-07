@@ -1,0 +1,16 @@
+
+.section_bloghead {
+  background-color: $color-3;
+  padding: 3em 5em;
+  h2 {
+    font-size: 2em;
+    font-family: $font-sub;
+    padding-bottom: 0.6em;
+  }
+  p {
+    width: 29em;
+    font-size: 1.5em;
+    color: $color-1;
+    line-height: 1.3;
+  }
+}
