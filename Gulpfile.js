@@ -7,12 +7,12 @@ var livereload = require("gulp-livereload");
 gulp.task("sass", function() {
   gulp.src("src/sass/**/*.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./public/css"))
+    .pipe(gulp.dest("public/css"))
     .pipe(livereload());
 });
 
 gulp.task("stream", function(callback) {
-  return gulp.src('/src/js/*.js')
+  return gulp.src('src/js/**/*.js')
   .pipe(stream({
     output: {
       filename: 'packed.js'
@@ -24,5 +24,5 @@ gulp.task("stream", function(callback) {
 gulp.task("default", function() {
   livereload.listen();
   gulp.watch("src/sass/**/*.scss", ["sass"]);
-  gulp.watch("js/**/*.js", ["stream"]);
+  gulp.watch("src/js/**/*.js", ["stream"]);
 });
