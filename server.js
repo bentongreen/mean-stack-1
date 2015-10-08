@@ -31,18 +31,19 @@ app.use(bodyParser.json);
 //     next();
 // });
 
-app.get('/', function(req, res) {
-    res.sendFile('index.html', { root: __dirname + '/' });
-});
+// app.get('/', function(req, res) {
+//     res.sendFile('index.html', { root: __dirname + '/' });
+// });
 
 // configure ilvereload
 app.use(require('connect-livereload')({port: 8080}));
 
-// // Dummy route
+// Root route
 router.get("/", function (req, res) {
-  res.sendFile(__dirname + "/src/app/index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
+// All assets
 router.get("/assets/*", function (req, res) {
   path = req.path.replace(/^\/assets/,'');
   if (path.match(/node_modules/)) {
@@ -52,13 +53,11 @@ router.get("/assets/*", function (req, res) {
   }
 });
 
-// Register all our routes with /api
-app.use("/api", apiRouter);
-app.use("/", baseRouter);
+// Register the router with the application
+app.use("/", router)
 
 // Create a new route with prefix /blogs
-
-var blogsRoute = apiRouter.route("/blogs");
+var blogsRoute = router.route("/api/blogs");
 
 // READ
 // Create endpoint /api/players for POST
@@ -79,18 +78,29 @@ blogsRoute.post(function (req, res) {
     if (err) {
       res.send(err);
     }
+    res.json({ message: "Player successfully save.", data: blog });
+  });
+});
 
-    res.json({ message: "Player successfully save.", data: player });
+// Create endpoint for /api/blogs for GET
+blogsRoute.get(function (req, res) {
+  Blog.find(function (err, blogs) {
+    if (err) {
+      res.send(err);
+    }
+    res.json(blogs);
   });
 });
 
 // Create
+
 // Create a new route for /blogs/:blog_id
-var blogRoute = apiRouter.route("/blogs/:blog_id");
+var blogRoute = router.route("/api/blogs/:blog_id");
 
 // Create endpoint for /api/blogs/:blogID
-blogRoute.get(function(req, res) {
-  Blog.findbyId(req.params.blog_id, function (err, blog) {
+blogRoute.get(function (req, res) {
+  // Find a specific blog
+  Blog.findById(req.params.blog_id, function (err, blog) {
     if (err) {
       res.send(err);
     }
@@ -100,9 +110,9 @@ blogRoute.get(function(req, res) {
 
 // Update
 // Change the blog
-blogRoute.put(function(req, res) {
+blogRoute.put(function (req, res) {
   // Use the Blog model to find a specific blog
-  Blog.findbyId(req.params.blog_id, function (err, player) {
+  Blog.findById(req.params.blog_id, function (err, player) {
     if (err) {
       res.send(err);
     }
@@ -117,7 +127,6 @@ blogRoute.put(function(req, res) {
       if (err) {
         res.send(err);
       }
-
       res.json(blog);
     });
   });
@@ -135,6 +144,6 @@ blogRoute.delete(function (req, res) {
   });
 });
 
-app.use(require("connect-livereload"));
+
 app.listen(port);
 console.log('server listening at port:' + port);
