@@ -18,7 +18,7 @@ gulp.task("stream", function(callback) {
       filename: 'packed.js'
     }
   }))
-  .pipe(gulp.dest('./js'));
+  .pipe(gulp.dest('public/js/'));
 });
 
 gulp.task("default", function() {
