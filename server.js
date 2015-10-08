@@ -3,29 +3,47 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
+var Blog = require("./models/blog");
+
+// Connect to the database
+mongoose.connect("mongodb://localhost/blog", function (err) {
+  if (err) {
+    console.log('connection error', err);
+  } else {
+    console.log('connection successful');
+  }
+});
 
 var app = express();
 var port = process.env.PORT || 3000;
 
-// Connect to the database
-mongoose.connect("mongodb://localhost/blog");
-
 // Create the Express router
-var baseRouter = express.Router();
-var apiRouter = express.Router();
-
-// configure ilvereload
-app.use(require('connect-livereload')({port: 8080}));
+var router = express.Router();
 
 // Use the body-parser package in our application
 app.use(bodyParser.json);
 
+// app.use(express.static(__dirname + '/public'));
+
+// app.get('/', function (req, res, next) {
+//     console.log('request was made...');
+//     console.log(req.originalUrl);
+//     next();
+// });
+
+app.get('/', function(req, res) {
+    res.sendFile('index.html', { root: __dirname + '/' });
+});
+
+// configure ilvereload
+app.use(require('connect-livereload')({port: 8080}));
+
 // // Dummy route
-baseRouter.get("/", function (req, res) {
+router.get("/", function (req, res) {
   res.sendFile(__dirname + "/src/app/index.html");
 });
 
-baseRouter.get("/assets/*", function (req, res) {
+router.get("/assets/*", function (req, res) {
   path = req.path.replace(/^\/assets/,'');
   if (path.match(/node_modules/)) {
     res.sendFile(__dirname + path);
@@ -113,26 +131,8 @@ blogRoute.delete(function (req, res) {
     if (err) {
       res.send(err)
     }
-
     res.json({ message: "Successfully removed blog." });
   });
-});
-
-app.use(express.static(__dirname + '/public'));
-
-app.get('/', function (req, res, next) {
-    console.log('request was made...');
-    console.log(req.originalUrl);
-    next();
-});
-
-app.get('/', function(req, res) {
-    res.sendFile('index.html', { root: __dirname + '/' });
-});
-
-app.use(function(req, res) {
-  console.log(req.originalUrl);
-    res.status(404).sendFile('404.html', { root: __dirname + '/' });
 });
 
 app.use(require("connect-livereload"));
