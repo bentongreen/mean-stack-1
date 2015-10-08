@@ -6,7 +6,7 @@ var BlogSchema = new mongoose.Schema({
   title: String,
   content: String,
   author: String,
-  date: Date,
+  date: String,
   comments: String,
 });
 
