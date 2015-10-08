@@ -21,29 +21,16 @@ var port = process.env.PORT || 3000;
 var router = express.Router();
 
 // Use the body-parser package in our application
-app.use(bodyParser.json);
-
-// app.use(express.static(__dirname + '/public'));
-
-// app.get('/', function (req, res, next) {
-//     console.log('request was made...');
-//     console.log(req.originalUrl);
-//     next();
-// });
-
-// app.get('/', function(req, res) {
-//     res.sendFile('index.html', { root: __dirname + '/' });
-// });
-
-// configure ilvereload
-app.use(require('connect-livereload')({port: 8080}));
+app.use(bodyParser.json());
 
 // Root route
 router.get("/", function (req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
+
 // All assets
+
 router.get("/assets/*", function (req, res) {
   path = req.path.replace(/^\/assets/,'');
   if (path.match(/node_modules/)) {
@@ -54,7 +41,7 @@ router.get("/assets/*", function (req, res) {
 });
 
 // Register the router with the application
-app.use("/", router)
+app.use("/", router);
 
 // Create a new route with prefix /blogs
 var blogsRoute = router.route("/api/blogs");
