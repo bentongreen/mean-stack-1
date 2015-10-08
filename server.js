@@ -31,12 +31,20 @@ router.get("/", function (req, res) {
 
 // All assets
 
-router.get("/assets/*", function (req, res) {
-  path = req.path.replace(/^\/assets/,'');
+// router.get("/assets/*", function (req, res) {
+//   path = req.path.replace(/^\/assets/,'');
+//   if (path.match(/node_modules/)) {
+//     res.sendFile(__dirname + "/public/" + path);
+//   } else {
+//     res.sendFile(__dirname + "/public/" + path);
+//   }
+// });
+router.get("/public/*", function (req, res) {
+  var path = req.path;
   if (path.match(/node_modules/)) {
     res.sendFile(__dirname + path);
   } else {
-    res.sendFile(__dirname + "/public/" + path);
+    res.sendFile(__dirname + path);
   }
 });
 
@@ -65,7 +73,7 @@ blogsRoute.post(function (req, res) {
     if (err) {
       res.send(err);
     }
-    res.json({ message: "Player successfully save.", data: blog });
+    res.json(blog);
   });
 });
 
