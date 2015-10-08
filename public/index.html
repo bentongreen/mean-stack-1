@@ -96,6 +96,16 @@
         </li>
       </ul>
     </footer>
+    <script type="text/ng-template" id="partials/blogs/blog_form.html">
+      <form ng-submit="vm.save()">
+        <input type="text" ng-model="vm.blog.title" placeholder="Title" />
+        <input type="text" ng-model="vm.blog.content" placeholder="Content" />
+        <input type="text" ng-model="vm.blog.author" placeholder="Author" />
+        <input type="text" ng-model="vm.blog.date" placeholder="Date" />
+        <input type="text" ng-model="vm.blog.comments" placeholder="Comments" />
+        <input type="submit" name="Submit">
+      </form>
+    </script>
     <script src="./public/js/packed.js"></script>
   </body>
 </html>
