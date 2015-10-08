@@ -52,12 +52,6 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	
-	alert('howdy');
-
-	alert('howdy');
-
-	alert('howdy');
 
 
 /***/ },
@@ -118,7 +112,7 @@
 	/* 1 */
 	/***/ function(module, exports) {
 
-		
+
 		alert('howdy');
 
 		alert('howdy');
@@ -176,7 +170,7 @@
 		/* 0 */
 		/***/ function(module, exports) {
 
-			
+
 			alert('howdy');
 
 			alert('howdy');
