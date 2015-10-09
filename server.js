@@ -72,7 +72,7 @@ app.post("/api/players", function (req, res) {
 });
 
 // Create endpoint for /api/blogs for GET
-blogsRoute.get(function (req, res) {
+app.get(function (req, res) {
   Blog.find(function (err, blogs) {
     if (err) {
       res.send(err);
