@@ -18,4 +18,6 @@ module.exports = {
   server: {
     serverFile: '.server.js',
     livereload: true
-};
+  }
+}
+
