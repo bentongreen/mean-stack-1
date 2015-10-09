@@ -47,9 +47,9 @@ app.use(express.static(__dirname + "/public"));
 // var blogsRoute = router.route("/api/blogs");
 
 // READ
-// Create endpoint /api/players for POST
+// Create endpoint /api/blogs for POST
 
-app.post("/api/players", function (req, res) {
+app.post("/api/blogs", function (req, res) {
 
 // blogsRoute.post(function (req, res) {
   // New instance of the Blog model
@@ -72,7 +72,7 @@ app.post("/api/players", function (req, res) {
 });
 
 // Create endpoint for /api/blogs for GET
-app.get(function (req, res) {
+app.get("/api/blogs", function (req, res) {
   Blog.find(function (err, blogs) {
     if (err) {
       res.send(err);
@@ -84,7 +84,7 @@ app.get(function (req, res) {
 // Create
 
 // Create a new route for /blogs/:blog_id
-app.get("/api/blogs/:blogs_id", function (req, res) {
+app.get("/api/blogs/:blog_id", function (req, res) {
 
   // Find a specific blog
   Blog.findById(req.params.blog_id, function (err, blog) {
@@ -98,9 +98,9 @@ app.get("/api/blogs/:blogs_id", function (req, res) {
 // Update
 
 // Change the blog
-app.put("/api/blogs/:player_id", function (req, res) {
+app.put("/api/blogs/:blogs_id", function (req, res) {
   // Use the Blog model to find a specific blog
-  Blog.findById(req.params.blog_id, function (err, player) {
+  Blog.findById(req.params.blogs_id, function (err, blog) {
     if (err) {
       res.send(err);
     }
@@ -110,7 +110,7 @@ app.put("/api/blogs/:player_id", function (req, res) {
     blog.date = req.body.date;
     blog.comments = req.body.comments;
 
-    // Save the player and check for errors
+    // Save the blog and check for errors
     blog.save(function (err) {
       if (err) {
         res.send(err);
@@ -123,8 +123,8 @@ app.put("/api/blogs/:player_id", function (req, res) {
 // Delete
 
 // Create endpoint /api/blogs/:blod_id for Delete
-app.delete("/api/players/:player_id", function (req, res) {
-  Player.findByIdAndRemove(req.params.blog_id, function (err) {
+app.delete("/api/blogs/:blog_id", function (req, res) {
+  Blog.findByIdAndRemove(req.params.blog_id, function (err) {
     if (err) {
       res.send(err)
     }
@@ -135,7 +135,7 @@ app.delete("/api/players/:player_id", function (req, res) {
 // Load the index file
 app.get('*', function (req, res) {
   res.sendFile(__dirname + "/public/index.html");
-})
+});
 
 app.listen(port);
 console.log('server listening at port:' + port);
