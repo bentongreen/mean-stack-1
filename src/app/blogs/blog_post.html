@@ -1,12 +1,13 @@
 
-<article class="post-detail">
-  <h1>{{vm.post.title}}</h1>
-  <ul class="post-data">
-    <li>By {{vm.post.author}}</li>
-    <li>{{vm.post.date}}</li>
-    <li>{{vm.post.comments}} comments</li>
+<article class="blog-detail">
+  <h1>{{vm.blog.title}}</h1>
+  <h1 ng-if="!vm.blogs.length">No blog posts yet!</h1>
+  <ul ng-if="vm.blogs.length" class="blog-data">
+    <li>By {{vm.blog.author}}</li>
+    <li>{{vm.blog.date}}</li>
+    <li>{{vm.blog.comments}} comments</li>
   </ul>
-  <p>{{vm.post.content}}</p>
-  <a class="btn btn__text btn--light" href="#/posts/{{vm.post._id}}/edit">edit this post</a>
+  <p>{{vm.blog.content}}</p>
+  <a class="btn btn__text btn--light" href="#/posts/{{vm.blog._id}}/edit">edit this post</a>
 </article>
 
