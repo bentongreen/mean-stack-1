@@ -12,7 +12,7 @@
     /////
 
     function initialize () {
-      getblogs();
+      getBlogs();
     }
 
     function getBlogs () {

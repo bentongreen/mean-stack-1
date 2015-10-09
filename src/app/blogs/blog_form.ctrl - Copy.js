@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+
   angular.module("blogapp").controller("BlogFormCtrl", ["BlogsService", "$routeParams", "$location", function (BlogsService, $routeParams, $location) {
     var vm = this;
 
