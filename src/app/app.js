@@ -1,3 +1,7 @@
+require("angular");
+
+// require("./entry.js");
+
 (function () {
   "use strict";
 
@@ -25,3 +29,5 @@
     });
   }]);
 }());
+
+require("angular-route");

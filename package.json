@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mbuchthal/mean-stack-1#readme",
   "dependencies": {
     "angular": "^1.4.7",
+    "angular-route": "^1.4.7",
     "body-parser": "^1.14.1",
     "connect-livereload": "^0.5.3",
     "express": "^4.13.3",
