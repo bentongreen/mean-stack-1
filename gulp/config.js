@@ -18,6 +18,10 @@ module.exports = {
   server: {
     serverFile: '.server.js',
     livereload: true
+  },
+  html: {
+    src: src + "/app/**/*.html",
+    dest: dest + "/partials/"
   }
   // production: {
   //   cssSrc: dest + '/css/*.css',

@@ -20,31 +20,11 @@ var app = express();
 // Use environment defined port or 3000
 var port = process.env.PORT || 3000;
 
-// // Create the Express router
-// var router = express.Router();
-
 // Use the body-parser package in our application
 app.use(bodyParser.json());
 
-// // Root route
-// router.get("/", function (req, res) {
-//   res.sendFile(__dirname + "/public/index.html");
-// });
-
-// router.get("/public/*", function (req, res) {
-//   var path = req.path;
-//   if (path.match(/node_modules/)) {
-//     res.sendFile(__dirname + path);
-//   } else {
-//     res.sendFile(__dirname + path);
-//   }
-// });
-
 // Register the router with the application
 app.use(express.static(__dirname + "/public"));
-
-// // Create a new route with prefix /blogs
-// var blogsRoute = router.route("/api/blogs");
 
 // READ
 // Create endpoint /api/blogs for POST
