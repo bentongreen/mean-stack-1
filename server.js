@@ -5,7 +5,7 @@ var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 var Blog = require("./models/blog");
 
-// Connect to the database
+// Connect to the database with error check
 mongoose.connect("mongodb://localhost/blog", function (err) {
   if (err) {
     console.log('connection error', err);
@@ -14,39 +14,44 @@ mongoose.connect("mongodb://localhost/blog", function (err) {
   }
 });
 
+// Create the Express application
 var app = express();
+
+// Use environment defined port or 3000
 var port = process.env.PORT || 3000;
 
-// Create the Express router
-var router = express.Router();
+// // Create the Express router
+// var router = express.Router();
 
 // Use the body-parser package in our application
 app.use(bodyParser.json());
 
-// Root route
-router.get("/", function (req, res) {
-  res.sendFile(__dirname + "/public/index.html");
-});
+// // Root route
+// router.get("/", function (req, res) {
+//   res.sendFile(__dirname + "/public/index.html");
+// });
 
-router.get("/public/*", function (req, res) {
-  var path = req.path;
-  if (path.match(/node_modules/)) {
-    res.sendFile(__dirname + path);
-  } else {
-    res.sendFile(__dirname + path);
-  }
-});
+// router.get("/public/*", function (req, res) {
+//   var path = req.path;
+//   if (path.match(/node_modules/)) {
+//     res.sendFile(__dirname + path);
+//   } else {
+//     res.sendFile(__dirname + path);
+//   }
+// });
 
 // Register the router with the application
-app.use("/", router);
+app.use(express.static(__dirname + "/public"));
 
-// Create a new route with prefix /blogs
-var blogsRoute = router.route("/api/blogs");
+// // Create a new route with prefix /blogs
+// var blogsRoute = router.route("/api/blogs");
 
 // READ
 // Create endpoint /api/players for POST
 
-blogsRoute.post(function (req, res) {
+app.post("/api/players", function (req, res) {
+
+// blogsRoute.post(function (req, res) {
   // New instance of the Blog model
   var blog = new Blog();
 
@@ -79,10 +84,8 @@ blogsRoute.get(function (req, res) {
 // Create
 
 // Create a new route for /blogs/:blog_id
-var blogRoute = router.route("/api/blogs/:blog_id");
+app.get("/api/blogs/:blogs_id", function (req, res) {
 
-// Create endpoint for /api/blogs/:blogID
-blogRoute.get(function (req, res) {
   // Find a specific blog
   Blog.findById(req.params.blog_id, function (err, blog) {
     if (err) {
@@ -93,8 +96,9 @@ blogRoute.get(function (req, res) {
 });
 
 // Update
+
 // Change the blog
-blogRoute.put(function (req, res) {
+app.put("/api/blogs/:player_id", function (req, res) {
   // Use the Blog model to find a specific blog
   Blog.findById(req.params.blog_id, function (err, player) {
     if (err) {
@@ -117,9 +121,9 @@ blogRoute.put(function (req, res) {
 });
 
 // Delete
-// Create endpoint /api/blogs/:blod_id for Delete
 
-blogRoute.delete(function (req, res) {
+// Create endpoint /api/blogs/:blod_id for Delete
+app.delete("/api/players/:player_id", function (req, res) {
   Player.findByIdAndRemove(req.params.blog_id, function (err) {
     if (err) {
       res.send(err)
@@ -128,6 +132,10 @@ blogRoute.delete(function (req, res) {
   });
 });
 
+// Load the index file
+app.get('*', function (req, res) {
+  res.sendFile(__dirname + "/public/index.html");
+})
 
 app.listen(port);
 console.log('server listening at port:' + port);
