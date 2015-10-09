@@ -1,0 +1,12 @@
+
+<article class="post-detail">
+  <h1>{{vm.post.title}}</h1>
+  <ul class="post-data">
+    <li>By {{vm.post.author}}</li>
+    <li>{{vm.post.date}}</li>
+    <li>{{vm.post.comments}} comments</li>
+  </ul>
+  <p>{{vm.post.content}}</p>
+  <a class="btn btn__text btn--light" href="#/posts/{{vm.post._id}}/edit">edit this post</a>
+</article>
+

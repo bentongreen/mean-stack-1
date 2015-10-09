@@ -1,3 +1,6 @@
+
+require("../app.js");
+
 angular.module("blogapp").controller("BlogCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
   var vm = this;
 
