@@ -21,8 +21,14 @@ gulp.task("stream", function(callback) {
   .pipe(gulp.dest('public/js/'));
 });
 
-gulp.task("default", function() {
-  livereload.listen();
-  gulp.watch("src/sass/**/*.scss", ["sass"]);
-  gulp.watch("src/js/**/*.js", ["stream"]);
+gulp.task("serve", ["sass", "stream"], function () {
+  // Start the server at the beginning of the task
+  server.run(["server.js"]);
+
+  gulp.watch(["src/sass/**/*.scss"], ["sass"]);
+  gulp.watch(["src/app/**/*.js"], ["stream"]);
+
+  gulp.watch(["server.js"], [server.run]);
 });
+
+gulp.task("default", ["sass", "serve"]);
