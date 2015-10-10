@@ -9,7 +9,7 @@ require("../app.js");
       scope: {
         blog: "=blog",
       }
-      templateUrl: "partials/blogs/blog_detail.html"
+      templateUrl: "partials/blogs/blog_details.html"
     };
   });
 }());
