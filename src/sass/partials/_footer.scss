@@ -35,3 +35,19 @@ footer{
     font-size: 2em; 
   }
 }
+
+@media screen and (max-width: 50em) {
+  footer{
+    @include flexbox;
+    p{
+      margin-bottom: 1em;
+    }
+    ul{
+      text-align: center;
+    }
+    li{
+      padding-right: 1em;
+      padding-left: 1em;
+    }
+  }
+}

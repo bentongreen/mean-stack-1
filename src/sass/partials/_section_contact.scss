@@ -22,15 +22,26 @@
 
 @media screen and (max-width: 50em) {
   .section_contact {
-    padding:3em 1em;
-    address{
-      margin-bottom: 1em;
-    }
+    padding:0em 0em;
+    margin-left: 0em;
+    text-align: center;
     p{
-
+      padding-left: 0em;
+      padding-bottom: 1em;
+      a{
+        margin-left: 0em;
+        padding-left: 0em;
+      }
+    }
+    .links_media{
+      margin-bottom: 1em;
+      padding-left: 0.25em;
     }
   }
   .section_contact_phone, .section_contact_email {
-  
+    margin-bottom: 1em;
+    margin-left: 2.5em;
+    margin-bottom: 1em;
+    padding-left: 0em;
   }
 }

@@ -55,7 +55,6 @@
 
 	__webpack_require__(2);
 	__webpack_require__(4);
-	// require("./index.js");
 
 	(function () {
 	  "use strict";
