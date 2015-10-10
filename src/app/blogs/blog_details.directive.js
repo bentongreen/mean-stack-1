@@ -3,11 +3,13 @@ require("../app.js");
 (function() {
   "use strict";
 
-  angular.module("blogapp").directive("blogDetails", function () {
+  angular.module("blogapp")
+  .directive("blogDetails", function () {
     return {
       scope: {
-        ngModel: "=", // ng-model
+        blog: "=blog",
       }
+      templateUrl: "partials/blogs/blog_detail.html"
     };
   });
 }());

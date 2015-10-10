@@ -5,7 +5,7 @@ module.exports = {
   javascript: {
     src: src + '/app/**/*.js',
     dest: dest + '/js/',
-    entryPoint: src + '/app/entry.js',
+    entryPoint: src + '/webpack-entry.js',
     packedFile: 'packed.js'
   },
   sass: {
@@ -22,11 +22,11 @@ module.exports = {
   html: {
     src: src + "/app/**/*.html",
     dest: dest + "/partials/"
+  },
+  production: {
+    cssSrc: dest + '/css/*.css',
+    jsSrc: dest + '/*.js',
+    dest: dest
   }
-  // production: {
-  //   cssSrc: dest + '/css/*.css',
-  //   jsSrc: dest + '/*.js',
-  //   dest: dest
-  // }
 };
 
