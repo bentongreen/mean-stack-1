@@ -15,13 +15,12 @@ module.exports = {
       indentedSyntax: true,
     }
   },
-  server: {
-    serverFile: '.server.js',
-    livereload: true
-  },
   html: {
     src: src + "/app/**/*.html",
     dest: dest + "/partials/"
+  },
+  server: {
+    serverFile: '.server.js',
   },
   production: {
     cssSrc: dest + '/css/*.css',
