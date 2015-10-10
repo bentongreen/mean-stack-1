@@ -1,7 +1,6 @@
 require("angular");
 require("angular-route");
-
-// require("./entry.js");
+require("./index.js");
 
 (function () {
   "use strict";
@@ -10,19 +9,19 @@ require("angular-route");
 
   app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider.when("/blogs", {
-      templateUrl: "partials/blogs/blog_form.html",
-      controller: "BlogCtrl as vm",
+      templateUrl: "partials/blogs/blogs_list.html",
+      controller: "BlogsCtrl as vm",
     })
     .when("/blogs/new", {
-      templateUrl: "/partials/blogs/blog_form.html",
+      templateUrl: "partials/blogs/blog_form.html",
       controller: "BlogFormCtrl as vm",
     })
     .when("/blogs/:blog_id/edit", {
-      templateUrl: "/partials/blogs/blog_form.html",
+      templateUrl: "partials/blogs/blog_form.html",
       controller: "BlogFormCtrl as vm",
     })
     .when("/blogs/:blog_id", {
-      templateUrl: "/partials/blogs/blog_detail.html",
+      templateUrl: "partials/blogs/blog_detail.html",
       controller: "BlogCtrl as vm",
     })
     .otherwise({

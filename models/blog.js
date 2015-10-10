@@ -7,7 +7,7 @@ var BlogSchema = new mongoose.Schema({
   content: String,
   author: String,
   date: String,
-  comments: String,
+  comments: String
 });
 
 // Export the Mongoose model

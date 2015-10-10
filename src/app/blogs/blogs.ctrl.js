@@ -11,8 +11,6 @@ require("../app.js");
 
     initialize();
 
-    /////
-
     function initialize () {
       getBlogs();
     }
