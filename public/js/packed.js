@@ -47,10 +47,6 @@
 	
 	__webpack_require__(1);
 	__webpack_require__(6);
-	__webpack_require__(7);
-	__webpack_require__(8);
-	__webpack_require__(9);
-	__webpack_require__(10);
 
 
 /***/ },
@@ -59,8 +55,7 @@
 
 	__webpack_require__(2);
 	__webpack_require__(4);
-
-	// require("./entry.js");
+	__webpack_require__(6);
 
 	(function () {
 	  "use strict";
@@ -69,19 +64,19 @@
 
 	  app.config(["$routeProvider", function ($routeProvider) {
 	    $routeProvider.when("/blogs", {
-	      templateUrl: "partials/blogs/blog_form.html",
-	      controller: "BlogCtrl as vm",
+	      templateUrl: "partials/blogs/blogs_list.html",
+	      controller: "BlogsCtrl as vm",
 	    })
 	    .when("/blogs/new", {
-	      templateUrl: "/partials/blogs/blog_form.html",
+	      templateUrl: "partials/blog/blog_form.html",
 	      controller: "BlogFormCtrl as vm",
 	    })
 	    .when("/blogs/:blog_id/edit", {
-	      templateUrl: "/partials/blogs/blog_form.html",
+	      templateUrl: "partials/blog/blog_form.html",
 	      controller: "BlogFormCtrl as vm",
 	    })
 	    .when("/blogs/:blog_id", {
-	      templateUrl: "/partials/blogs/blog_detail.html",
+	      templateUrl: "partials/blog/blog_detail.html",
 	      controller: "BlogCtrl as vm",
 	    })
 	    .otherwise({
@@ -30017,6 +30012,19 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	
+	// require("./app.js");
+	__webpack_require__(7);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./blogs/blog_details.directive.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	__webpack_require__(9);
+	__webpack_require__(10);
+	__webpack_require__(11);
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
 	__webpack_require__(1);
 
 	angular.module("blogapp").controller("BlogCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
@@ -30035,26 +30043,8 @@
 
 
 /***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(1);
-
-	(function() {
-	  "use strict";
-
-	  angular.module("blogapp").directive("blogDetails", function () {
-	    return {
-	      scope: {
-	        ngModel: "=", // ng-model
-	      }
-	    };
-	  });
-	}());
-
-
-/***/ },
-/* 8 */
+/* 8 */,
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
@@ -30091,7 +30081,7 @@
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
@@ -30106,8 +30096,6 @@
 	    vm.delete = deleteBlog;
 
 	    initialize();
-
-	    /////
 
 	    function initialize () {
 	      getBlogs();
@@ -30129,7 +30117,7 @@
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
@@ -30152,7 +30140,7 @@
 	        return $http.put(urlRoot + "/" + model._id, model);
 	      },
 	      create: function (model) {
-	        return $http.post(urlRoot, model); // ideal, but doesn't work
+	        return $http.post(urlRoot, model);
 	      },
 	      delete: function (model) {
 	        return $http.delete(urlRoot + "/" + model._id);

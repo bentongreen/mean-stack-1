@@ -18,7 +18,7 @@ require("../app.js");
         return $http.put(urlRoot + "/" + model._id, model);
       },
       create: function (model) {
-        return $http.post(urlRoot, model); // ideal, but doesn't work
+        return $http.post(urlRoot, model);
       },
       delete: function (model) {
         return $http.delete(urlRoot + "/" + model._id);
