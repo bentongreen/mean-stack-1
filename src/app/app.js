@@ -28,5 +28,3 @@ require("angular-route");
     });
   }]);
 }());
-
-
