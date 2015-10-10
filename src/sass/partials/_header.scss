@@ -4,10 +4,7 @@
 	@media screen and (min-width: 50em) {
 		position: relative;
 		top: 2em;
-	}
-		@media screen and (max-width: 50em) {
-			text-align: center;
-		}
+	}	
 }
 
 header {
@@ -48,7 +45,7 @@ header {
 
 	@media screen and (max-width: 50em) {
 		.logo{
-			margin-left: 0em;
+			margin-left: 3.7em;
 			text-align: center;
 		}
 		nav {

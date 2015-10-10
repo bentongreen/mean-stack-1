@@ -20,4 +20,17 @@
   color: inherit;
 }
 
+@media screen and (max-width: 50em) {
+  .section_contact {
+    padding:3em 1em;
+    address{
+      margin-bottom: 1em;
+    }
+    p{
 
+    }
+  }
+  .section_contact_phone, .section_contact_email {
+  
+  }
+}

@@ -36,3 +36,16 @@
   }
 }
 
+@media screen and (max-width: 50em) {
+  .section_learnmore {
+    p{
+      padding: 0 3em 3em;
+    }
+  }
+  .container_learnmore {
+    a{
+      @include flexbox;
+      margin-bottom: 1em;
+    }
+  }
+}

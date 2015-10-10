@@ -21,6 +21,10 @@
   li {
     padding: 0 0.5em;
   }
+  @media screen and (max-width: 50em) {
+    padding-left: 2.5em;
+    padding-bottom: 1em;
+  }
 }
 .list_blog_socialmedia {
   display: inherit;
