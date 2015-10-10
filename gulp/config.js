@@ -21,7 +21,7 @@ module.exports = {
   },
   html: {
     src: src + "/app/**/*.html",
-    dest: dest + "/partials/"
+    dest: dest
   },
   production: {
     cssSrc: dest + '/css/*.css',
