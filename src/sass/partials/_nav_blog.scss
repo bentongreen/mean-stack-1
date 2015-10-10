@@ -3,6 +3,7 @@
   border: 1px solid $color-2;
   @include flexbox(center, space-between);
   padding: 1em 5em;
+  margin-bottom: 2em;
 }
 
 .list_blog_tree {

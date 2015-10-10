@@ -47,6 +47,10 @@ header {
 	}
 
 	@media screen and (max-width: 50em) {
+		.logo{
+			margin-left: 0em;
+			text-align: center;
+		}
 		nav {
 			padding-top: 1em;
 			display: block;

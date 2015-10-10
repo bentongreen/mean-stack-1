@@ -1,14 +1,13 @@
-
 .blog_form {
+  margin-top: 1em;
   font-family: $font-sub;
-  border: 3px #000 solid;
+  border: 3px $color-2 solid;
   border-radius: 10%;
   width: 50em;
   margin: 0 auto 2em;
   padding-top: 2em;
   padding-bottom: 2em;
   background-color: $color-3;
-
 }
 legend {
   font-size: 2em;
@@ -41,4 +40,12 @@ button {
   }
 }
 
-
+@media screen and (max-width: 50em) {
+  .blog_form {
+    width: 98%;
+    margin: 0 auto;
+  }
+  button {
+    width: 40%;
+  }
+}
