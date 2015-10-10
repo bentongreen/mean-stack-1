@@ -1,14 +1,14 @@
 <div>
-<article class="blog-detail" ng-repeat="blog in vm.blogs">
-  <h1>{{blog.title}}</h1>
-  <h1 ng-if="!vm.blogs.length">No blog posts yet!</h1>
-  <p>{{blog.content}} | limitTo: 300</p>
-  <ul ng-if="vm.blogs.length" class="blog-data">
-    <li>By: {{blog.author}}</li>
-    <li>Date: {{blog.date}}</li>
-    <li>Comments: {{blog.comments}}</li>
-  </ul>
-  <button ng-click="vm.delete(blog)">delete this blog</button>
-  <a href="#/blogs/new">Add a new blog</a>
-</article>
+  <article class="blog-detail" ng-repeat="blog in vm.blogs">
+    <h1>{{blog.title}}</h1>
+    <h1 ng-if="!vm.blogs.length">No blog posts yet!</h1>
+    <p>{{blog.content}} | limitTo: 300</p>
+    <ul ng-if="vm.blogs.length" class="blog-data">
+      <li>By: {{blog.author}}</li>
+      <li>Date: {{blog.date}}</li>
+      <li>Comments: {{blog.comments}}</li>
+    </ul>
+    <button ng-click="vm.delete(blog)">delete this blog</button>
+    <a href="#/blogs/new">Add a new blog</a>
+  </article>
 </div>

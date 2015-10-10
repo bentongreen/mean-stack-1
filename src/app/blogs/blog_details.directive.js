@@ -8,7 +8,7 @@ require("../app.js");
     return {
       scope: {
         blog: "=blog",
-      }
+      },
       templateUrl: "partials/blogs/blog_details.html",
     };
   });

@@ -30015,7 +30015,7 @@
 	
 	// require("./app.js");
 	__webpack_require__(7);
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./blogs/blog_details.directive.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
@@ -30044,7 +30044,27 @@
 
 
 /***/ },
-/* 8 */,
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+
+	(function() {
+	  "use strict";
+
+	  angular.module("blogapp")
+	  .directive("blogDetails", function () {
+	    return {
+	      scope: {
+	        blog: "=blog",
+	      },
+	      templateUrl: "partials/blogs/blog_details.html",
+	    };
+	  });
+	}());
+
+
+/***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
