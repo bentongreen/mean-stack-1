@@ -12,15 +12,15 @@ require("angular-route");
       controller: "BlogsCtrl as vm",
     })
     .when("/blogs/new", {
-      templateUrl: "partials/blog/blog_form.html",
+      templateUrl: "partials/blogs/blog_form.html",
       controller: "BlogFormCtrl as vm",
     })
     .when("/blogs/:blog_id/edit", {
-      templateUrl: "partials/blog/blog_form.html",
+      templateUrl: "partials/blogs/blog_form.html",
       controller: "BlogFormCtrl as vm",
     })
     .when("/blogs/:blog_id", {
-      templateUrl: "partials/blog/blog_details.html",
+      templateUrl: "partials/blogs/blog_details.html",
       controller: "BlogCtrl as vm",
     })
     .otherwise({

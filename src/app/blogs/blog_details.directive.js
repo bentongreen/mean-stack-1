@@ -7,7 +7,7 @@ require("../app.js");
   .directive("blogDetails", function () {
     return {
       scope: {
-        blog: "=blog",
+        blog: "=blogs",
       },
       templateUrl: "partials/blogs/blog_details.html",
     };
