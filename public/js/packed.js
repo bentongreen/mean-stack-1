@@ -67,15 +67,15 @@
 	      controller: "BlogsCtrl as vm",
 	    })
 	    .when("/blogs/new", {
-	      templateUrl: "partials/blogs/blog_form.html",
+	      templateUrl: "partials/blog/blog_form.html",
 	      controller: "BlogFormCtrl as vm",
 	    })
 	    .when("/blogs/:blog_id/edit", {
-	      templateUrl: "partials/blogs/blog_form.html",
+	      templateUrl: "partials/blog/blog_form.html",
 	      controller: "BlogFormCtrl as vm",
 	    })
 	    .when("/blogs/:blog_id", {
-	      templateUrl: "partials/blogs/blog_detail.html",
+	      templateUrl: "partials/blog/blog_details.html",
 	      controller: "BlogCtrl as vm",
 	    })
 	    .otherwise({
@@ -30012,7 +30012,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	// require("./app.js");
+	__webpack_require__(1);
 	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
