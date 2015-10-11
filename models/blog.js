@@ -6,8 +6,8 @@ var BlogSchema = new mongoose.Schema({
   title: String,
   content: String,
   author: String,
-  date: String,
-  comments: String
+  date: { type: Date, default: Date.now },
+  comments: Number
 });
 
 // Export the Mongoose model
