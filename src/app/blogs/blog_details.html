@@ -4,7 +4,7 @@
   <div class="blog_info">
     <ul class="blog-data">
       <li>By: {{vm.blog.author}}</li>
-      <li>Date: {{vm.blog.date}}</li>
+      <li>Date: {{vm.blog.date | date:'shortDate'}}</li>
       <li>Comments: {{vm.blog.comments}}</li>
     </ul>
   </div>

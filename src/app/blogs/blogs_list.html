@@ -7,7 +7,7 @@
       <div class="blog_info">
         <ul ng-if="vm.blogs.length" class="blog-data">
           <li>By: {{blog.author}}</li>
-          <li>Date: {{blog.date}}</li>
+          <li>Date: {{blog.date | date:'shortDate'}}</li>
           <li>Comments: {{blog.comments}}</li>
         </ul>
         <a href="#/blogs/{{blog._id}}" class="read_more">Read More</a>
