@@ -1,9 +1,10 @@
 
 .blog_post {
-  padding: 3em 5em;
-  font-family: $font-sub;
-  min-width: 50em;
+  padding: 2em 5em;
+  font-family: $font-main;
+  min-width: 45em;
   margin: auto;
+  width: 70%;
   h2 {
     padding-top: 1em;
     font-size: 1.8em;
@@ -15,6 +16,13 @@
     padding-top: 1.5em;
     font-weight: 300;
     color: $color-2;
+  }
+  .full-post {
+    padding-bottom: 2em;
+  }
+  button {
+    @include button-mock ($color-1);
+    float: right;
   }
 }
 
@@ -28,6 +36,8 @@
     float: left;
     font-style: italic;
     list-style-type: none;
+    padding-top: 0.5em;
+    font-size: 0.8em;
     :nth-child(2):before {
       content: '\b7\a0';
     }
@@ -38,18 +48,16 @@
       display: inline;
     }
   }
-  a {
+  .read_more {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    padding: 1em 2em;
+    padding: .9em 3em;
     border: 1px solid;
     border-radius: .5em;
     font-size: .8em;
     letter-spacing: .1em;
-
     background-color: #000;
-
     display: inline-block;
     float: right;
     &:hover {
