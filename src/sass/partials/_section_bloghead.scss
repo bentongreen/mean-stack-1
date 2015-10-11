@@ -2,25 +2,21 @@
 .section_bloghead {
   background-color: $color-3;
   padding: 3em 10em;
+  @media screen and (max-width: 50em) {
+    padding: 3em 2em;
+    margin: 0 auto;
+  }
   h2 {
     font-size: 2em;
     font-family: $font-sub;
     padding-bottom: 0.6em;
   }
   p {
-    width: 29em;
+    max-width: 29em;
     font-size: 1.5em;
     color: $color-1;
     line-height: 1.3;
-  }
-}
-
-@media screen and (max-width: 50em) {
-  .section_bloghead {
-    padding: 3em 2em;
-
-    margin: 0 auto;
-    p{
+    @media screen and (max-width: 50em) {
       width: 90%;
     }
   }

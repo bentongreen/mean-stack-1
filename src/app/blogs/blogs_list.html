@@ -3,14 +3,16 @@
     <h2>{{blog.title}}</h2>
     <h2 ng-if="!vm.blogs.length">No blog posts yet!</h2>
     <p>{{blog.content | limitTo: 350}}</p>
-    <div class="blog_info">
-      <ul ng-if="vm.blogs.length" class="blog-data">
-        <li>By: {{blog.author}}</li>
-        <li>Date: {{blog.date}}</li>
-        <li>Comments: {{blog.comments}}</li>
-      </ul>
-      <a href="#/blogs/{{blog._id}}" class="read_more">Read More</a>
-      <button ng-click="vm.delete(blog)">delete this blog</button>
+    <div class="blog_info_container">
+      <div class="blog_info">
+        <ul ng-if="vm.blogs.length" class="blog-data">
+          <li>By: {{blog.author}}</li>
+          <li>Date: {{blog.date}}</li>
+          <li>Comments: {{blog.comments}}</li>
+        </ul>
+        <a href="#/blogs/{{blog._id}}" class="read_more">Read More</a>
+        <button ng-click="vm.delete(blog)">delete this blog</button>
+      </div>
     </div>
   </article>
   <a href="#/blogs/new" class="add-blog">Add a new blog</a>
