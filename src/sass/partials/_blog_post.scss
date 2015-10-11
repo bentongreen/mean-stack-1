@@ -1,9 +1,11 @@
 
 .blog_post {
-  padding: 3em 5em;
-  font-family: $font-sub;
-  min-width: 50em;
+  padding: 2em 20em;
+  font-family: $font-main;
   margin: auto;
+  @media screen and (max-width: 75em) {
+    padding: 2em 5em;
+  }
   h2 {
     padding-top: 1em;
     font-size: 1.8em;
@@ -16,9 +18,20 @@
     font-weight: 300;
     color: $color-2;
   }
+  .full-post {
+    padding-bottom: 2em;
+  }
+  button {
+    @include button-mock ($color-1);
+    float: right;
+  }
+  @media screen and (max-width: 50em) {
+    min-width: 20em;
+  }
 }
 
 .blog_info {
+
   padding-top: 2em;
   padding-bottom: 2em;
   ul {
@@ -28,6 +41,8 @@
     float: left;
     font-style: italic;
     list-style-type: none;
+    padding-top: 0.5em;
+    font-size: 0.8em;
     :nth-child(2):before {
       content: '\b7\a0';
     }
@@ -38,18 +53,16 @@
       display: inline;
     }
   }
-  a {
+  .read_more {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    padding: 1em 2em;
+    padding: .9em 3em;
     border: 1px solid;
     border-radius: .5em;
     font-size: .8em;
     letter-spacing: .1em;
-
     background-color: #000;
-
     display: inline-block;
     float: right;
     &:hover {
@@ -58,4 +71,13 @@
       border-color: $color-3;
     }
   }
+}
+
+.edit-button {
+  @include button-mock($color-1, #fff);
+  font-size: .7em;
+  margin-left: 0;
+}
+.back-button {
+  @extend .edit-button;
 }

@@ -12,9 +12,13 @@
   p {
     text-align: center;
     color: #FFFFFF;
-    padding: 0 24em 3em;
-    font-size: .9em;
+    padding: 0 15em 3em;
+    font-size: 1em;
     line-height: 1.5;
+    font-weight: 300;
+    @media screen and (max-width: 75em) {
+      padding: 0 5em 3em;
+    }
   }
 }
 

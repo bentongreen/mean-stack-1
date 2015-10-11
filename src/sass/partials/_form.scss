@@ -1,3 +1,4 @@
+
 .blog_form {
   margin-top: 1em;
   font-family: $font-sub;
@@ -8,44 +9,35 @@
   padding-top: 2em;
   padding-bottom: 2em;
   background-color: $color-3;
-}
-legend {
-  font-size: 2em;
-  padding-bottom: 1em;
-  padding-left: 1em;
-}
-fieldset {
-  margin-bottom: 2em;
-  border: none;
-}
-label {
-  padding-right: 1em;
-  padding-left: 2em;
-}
-button {
-  padding: 0.8em 1.8em;
-  color: #fff;
-  background-color: $color-3;
-  font-size: 1em;
-  text-align: center;
-  border-radius: 0.4em;
-  width: 20%;
-  border: 1px solid #000;
-  border-width: 1px 3px 3px 1px;
-  margin-bottom: 0.8em;
-  margin-left: 2em;
-  &:hover {
-    color: #000;
-    background-color: #fff;
-  }
-}
-
-@media screen and (max-width: 50em) {
-  .blog_form {
+  @media screen and (max-width: 50em) {
     width: 98%;
     margin: 0 auto;
   }
+  legend {
+    font-size: 2em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+  }
+  textarea{
+    width: 50%;
+  }
+  input {
+    width: 30%;
+  }
+  fieldset {
+    margin-bottom: 2em;
+    border: none;
+  }
+  label {
+    padding-right: 1em;
+    padding-left: 2em;
+  }
   button {
-    width: 40%;
+    @include button-mock($color-3, #fff);
+    margin-left: 3em;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
   }
 }

@@ -2,7 +2,7 @@
 .section_contact {
   @include flexbox(stretch, space-between);
   background-color: #fff;
-  padding: 3em 10em;
+  padding: 3em 5em;
   address {
     padding-top: 1em;
     line-height: 1.5em;
@@ -12,6 +12,7 @@
     display: inline-block;
     width: 12em;
     padding-left: 3em;
+    line-height: 1.5;
   }
 }
 

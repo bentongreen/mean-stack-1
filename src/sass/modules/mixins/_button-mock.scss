@@ -1,0 +1,16 @@
+@mixin button-mock ($button-bk: inherit, $button-clr: #fff) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $button-clr;
+  padding: 1em 2em;
+  border: 1px solid #fff;
+  border-radius: .5em;
+  letter-spacing: .1em;
+  margin: auto 1em;
+  background-color: $button-bk;
+   &:hover {
+      background-color: $color-3;
+      color: #000;
+      border-color: $color-3;
+    }
+}
