@@ -8,10 +8,10 @@
   letter-spacing: .1em;
   margin: auto 1em;
   background-color: $button-bk;
-  font-family: $font-main
-   &:hover {
-      background-color: $hover-bk;
-      color: $hover-clr;
-      border-color: $color-3;
-    }
+  font-family: $font-main;
+  &:hover {
+    background-color: $hover-bk;
+    color: $hover-clr;
+    border-color: $color-3;
+  }
 }

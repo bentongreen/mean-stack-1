@@ -22,10 +22,6 @@
   .full-post {
     padding-bottom: 2em;
   }
-  button {
-    @include button-mock ($color-1);
-    float: right;
-  }
   @media screen and (max-width: 50em) {
     min-width: 20em;
   }
@@ -69,13 +65,18 @@
   display: inline-block;
   float: right;
   font-size: 0.75em;
+  padding: 1em 3.03em;
   &:hover {
     color: #000;
   }
 }
 .delete_blog {
   @include button-mock(#000, #fff, #fff, $color-3);
-
+font-size: 0.75em;
+padding: 0.917em 1em;
+  &:hover {
+    color: #000;
+  }
 }
 
 .edit-button {
