@@ -4,7 +4,8 @@
   font-family: $font-main;
   margin: auto;
   @media screen and (max-width: 75em) {
-    padding: 2em 5em;
+    width: 95%;
+    padding: 2em 0.25em;
   }
   h2 {
     padding-top: 1em;

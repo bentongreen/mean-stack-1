@@ -12,6 +12,25 @@
   @media screen and (max-width: 50em) {
     width: 98%;
     margin: 0 auto;
+    legend{
+      padding-left: 0em;
+      display: block;
+      margin: 0 auto;
+    }
+    fieldset{
+      label{
+        display: block;
+        text-align: center;
+      }
+      input{
+        display: block;
+        margin: 0 auto;
+      }
+      textarea{
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
   legend {
     font-size: 2em;
@@ -35,6 +54,10 @@
   button {
     @include button-mock($color-3, #fff);
     margin-left: 3em;
+    @media screen and (max-width: 50em) {
+      display: block;
+      margin: 0 auto;
+    }
     &:hover {
       background-color: #fff;
       color: #000;
