@@ -1,4 +1,4 @@
-footer{
+footer {
   min-height: 5em;
   color: $color-1;
   display: flex;
@@ -11,12 +11,12 @@ footer{
   border-top: 1.5px solid $color-2;
   padding-top: 3em;
   padding-bottom: 3em;
-  
-  ul{
+
+  ul {
     text-transform: uppercase;
   }
 
-  li{
+  li {
     color: $color-1;
     font-family: $font-main;
     font-size: 2em;
@@ -25,27 +25,27 @@ footer{
     padding-left: 2.25em;
   }
 
-  a{
+  a {
     text-decoration: none;
     color: $color-1;
   }
 
-  p{
+  p {
     font-family: $font-main;
-    font-size: 2em; 
+    font-size: 2em;
   }
 }
 
 @media screen and (max-width: 50em) {
-  footer{
+  footer {
     @include flexbox;
-    p{
+    p {
       margin-bottom: 1em;
     }
-    ul{
+    ul {
       text-align: center;
     }
-    li{
+    li {
       padding-right: 1em;
       padding-left: 1em;
     }

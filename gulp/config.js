@@ -23,11 +23,9 @@ module.exports = {
     src: src + "/app/**/*.html",
     dest: dest + "/partials/"
   },
-
   production: {
     cssSrc: dest + '/css/*.css',
     jsSrc: dest + '/*.js',
     dest: dest
   }
 };
-
