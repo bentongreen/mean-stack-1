@@ -29,10 +29,17 @@
   @media screen and (max-width: 50em) {
     min-width: 20em;
   }
+  &:after {
+    content: '';
+    width: 48em;
+    display: block;
+    height: 3em;
+    border-bottom: 1px solid $color-2;
+    padding-top: 2em;
+  }
 }
 
 .blog_info {
-
   padding-top: 2em;
   padding-bottom: 2em;
   ul {
@@ -43,6 +50,7 @@
     font-style: italic;
     list-style-type: none;
     padding-top: 0.5em;
+    padding-bottom: 1em;
     font-size: 0.8em;
     :nth-child(2):before {
       content: '\b7\a0';
@@ -54,24 +62,20 @@
       display: inline;
     }
   }
-  .read_more {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    padding: .9em 3em;
-    border: 1px solid;
-    border-radius: .5em;
-    font-size: .8em;
-    letter-spacing: .1em;
-    background-color: #000;
-    display: inline-block;
-    float: right;
-    &:hover {
-      background-color: $color-3;
-      color: #000;
-      border-color: $color-3;
-    }
+}
+
+.read_more {
+  @include button-mock(#000, #fff, #fff, $color-3);
+  display: inline-block;
+  float: right;
+  font-size: 0.75em;
+  &:hover {
+    color: #000;
   }
+}
+.delete_blog {
+  @include button-mock(#000, #fff, #fff, $color-3);
+
 }
 
 .edit-button {
