@@ -1,5 +1,5 @@
 
-.section_contact {
+.contact {
   @include flexbox(stretch, space-between);
   background-color: #fff;
   padding: 3em 5em;
@@ -30,7 +30,7 @@
   }
 }
 
-.section_contact_phone, .section_contact_email {
+.contact_phone, .contact_email {
   text-decoration: none;
   color: inherit;
   @media screen and (max-width: 50em) {
@@ -39,7 +39,7 @@
   }
 }
 
-.contact_section_info {
+.contact_info {
   justify-content: center;
   -webkit-justify-content: center;
   padding-bottom: 2em;
