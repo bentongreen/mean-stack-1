@@ -10,10 +10,11 @@
           <li>Date: {{blog.date | date:'shortDate'}}</li>
           <li>Comments: {{blog.comments}}</li>
         </ul>
-        <a href="#/blogs/{{blog._id}}" class="read_more">Read More</a>
-        <button ng-click="vm.delete(blog)">delete this blog</button>
+        <div class="blog_info_links">
+          <a href="#/blogs/{{blog._id}}" class="read_more">Read More</a>
+          <button ng-click="vm.delete(blog)" class="delete_blog">delete this blog</button>
+        </div>
       </div>
     </div>
   </article>
-  <a href="#/blogs/new" class="add-blog">Add a new blog</a>
 </div>
