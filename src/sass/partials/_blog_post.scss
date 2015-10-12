@@ -1,7 +1,7 @@
 
 .blog_post {
   padding: 2em 20em;
-  font-family: $font-main;
+  font-family: $font-sub;
   margin: auto;
   @media screen and (max-width: 75em) {
     width: 95%;
@@ -72,8 +72,8 @@
 }
 .delete_blog {
   @include button-mock(#000, #fff, #fff, $color-3);
-font-size: 0.75em;
-padding: 0.917em 1em;
+  font-size: 0.75em;
+  padding: 0.959em 1.182em;
   &:hover {
     color: #000;
   }
