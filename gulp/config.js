@@ -1,4 +1,4 @@
-var dest = "./public";
+var dest = './public';
 var src = './src';
 
 module.exports = {
@@ -17,11 +17,15 @@ module.exports = {
   },
   server: {
     serverFile: '.server.js',
-    livereload: true
+    livereload: true,
   },
-  html: {
-    src: src + "/app/**/*.html",
-    dest: dest + "/partials/"
+  index: {
+    src: src + '/app/index.html',
+    dest: dest + '/',
+  },
+  partials: {
+    src: [src + '/app/**/*.html', '!' + src + '/app/index.html'],
+    dest: dest + '/partials/'
   },
   production: {
     cssSrc: dest + '/css/*.css',
